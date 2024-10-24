@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyDoc</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <h1>MyDoc - Find Your Doctor</h1>
+        <div class="search-container">
+            <input type="text" placeholder="Search for doctors..." class="search-bar">
+            <button class="search-button"><i class="fas fa-search"></i></button>
+        </div>
+    </header>
+
+    <nav class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/search">Search Doctors</a></li>
+            <li><a href="/book-appointment">Book Appointment</a></li>
+            <li><a href="/my-profile">My Profile</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="dashboard-container">
+            <div class="card nearby-doctors">
+                <h2>Nearby Doctors</h2>
+                <div class="doctor-grid">
+                    <div class="doctor-item">
+                        <img src="https://via.placeholder.com/50" alt="Doctor 1" class="doctor-image">
+                        <div class="doctor-info">
+                            <h3>Dr. John Doe</h3>
+                            <p>Location: Downtown</p>
+                            <p>Specialty: Cardiology</p>
+                            <p>Rating: ★★★★☆ (4.5)</p>
+                        </div>
+                    </div>
+                    <div class="doctor-item">
+                        <img src="https://via.placeholder.com/50" alt="Doctor 2" class="doctor-image">
+                        <div class="doctor-info">
+                            <h3>Dr. Jane Smith</h3>
+                            <p>Location: Uptown</p>
+                            <p>Specialty: Dermatology</p>
+                            <p>Rating: ★★★★☆ (4.2)</p>
+                        </div>
+                    </div>
+                    <div class="doctor-item">
+                        <img src="https://via.placeholder.com/50" alt="Doctor 3" class="doctor-image">
+                        <div class="doctor-info">
+                            <h3>Dr. Emily Johnson</h3>
+                            <p>Location: Midtown</p>
+                            <p>Specialty: Pediatrics</p>
+                            <p>Rating: ★★★★★ (5.0)</p>
+                        </div>
+                    </div>
+                    <div class="doctor-item">
+                        <img src="https://via.placeholder.com/50" alt="Doctor 4" class="doctor-image">
+                        <div class="doctor-info">
+                            <h3>Dr. Michael Brown</h3>
+                            <p>Location: Eastside</p>
+                            <p>Specialty: Orthopedics</p>
+                            <p>Rating: ★★★★☆ (4.3)</p>
+                        </div>
+                    </div>
+                    <div class="doctor-item">
+                        <img src="https://via.placeholder.com/50" alt="Doctor 5" class="doctor-image">
+                        <div class="doctor-info">
+                            <h3>Dr. Sarah Wilson</h3>
+                            <p>Location: Westside</p>
+                            <p>Specialty: Neurology</p>
+                            <p>Rating: ★★★★☆ (4.4)</p>
+                        </div>
+                    </div>
+                    <div class="doctor-item">
+                        <img src="https://via.placeholder.com/50" alt="Doctor 6" class="doctor-image">
+                        <div class="doctor-info">
+                            <h3>Dr. David Smith</h3>
+                            <p>Location: Lakeside</p>
+                            <p>Specialty: Gynecology</p>
+                            <p>Rating: ★★★★☆ (4.6)</p>
+                        </div>
+                    </div>
+                    <div class="doctor-item">
+                        <img src="https://via.placeholder.com/50" alt="Doctor 7" class="doctor-image">
+                        <div class="doctor-info">
+                            <h3>Dr. Anna Lee</h3>
+                            <p>Location: Northside</p>
+                            <p>Specialty: Internal Medicine</p>
+                            <p>Rating: ★★★★☆ (4.1)</p>
+                        </div>
+                    </div>
+                    <div class="doctor-item">
+                        <img src="https://via.placeholder.com/50" alt="Doctor 8" class="doctor-image">
+                        <div class="doctor-info">
+                            <h3>Dr. Chris Evans</h3>
+                            <p>Location: Southside</p>
+                            <p>Specialty: Psychiatry</p>
+                            <p>Rating: ★★★★★ (5.0)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Upcoming Appointments</h2>
+                <ul>
+                    <li>Dr. John Doe - Cardiology on 12th Oct</li>
+                    <li>Dr. Jane Smith - Dermatology on 15th Oct</li>
+                </ul>
+                <a href="/appointments" class="button">View All</a>
+            </div>
+
+            <div class="card">
+                <h2>Recommended Doctors</h2>
+                <ul>
+                    <li><a href="/doctor/johndoe">Dr. John Doe - Cardiology</a></li>
+                    <li><a href="/doctor/janesmith">Dr. Jane Smith - Dermatology</a></li>
+                </ul>
+                <a href="/search" class="button">Search More</a>
+            </div>
+
+            <div class="card">
+                <h2>Patient Health Records</h2>
+                <p>Your health records are safely stored.</p>
+                <a href="/my-profile" class="button">View Records</a>
+            </div>
+
+            <div class="card">
+                <h2>Quick Actions</h2>
+                <ul>
+                    <li><a href="/search">Search Doctors</a></li>
+                    <li><a href="/book-appointment">Book Appointment</a></li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MyDoc. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const main = document.querySelector('main'); // Select the main element
+            sidebar.classList.toggle('active');
+            // Adjust the main margin based on sidebar state
+            if (sidebar.classList.contains('active')) {
+                main.style.marginLeft = '250px'; // Set margin when sidebar is active
+            } else {
+                main.style.marginLeft = '0'; // Reset margin when sidebar is inactive
+            }
+        }
+    </script>
+</body>
+</html>

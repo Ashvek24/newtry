@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results - MyDoc</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #007bff; /* New background color */
+            color: #333;
+        }
+
+        header {
+            background-color: #0056b3; /* Darker blue for header */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #FFEB3B; /* Yellow color on hover */
+        }
+
+        main {
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            color: #ffffff;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        #doctor-list {
+            list-style-type: none;
+            padding: 0;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        #doctor-list li {
+            background-color: white;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        #doctor-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        h3 {
+            color: #007bff;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+
+        p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #0056b3; /* Blue button */
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #003c82; /* Darker blue on hover */
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #003c82;
+            color: white;
+            margin-top: 50px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MyDoc</h1>
+        <nav>
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/search">Search Doctors</a></li>
+                <li><a href="/book-appointment">Book Appointment</a></li>
+                <li><a href="/my-profile">My Profile</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Doctors</h2>
+        <ul id="doctor-list">
+            <!-- Example doctor entry -->
+            <li>
+                <h3>Dr. John Doe</h3>
+                <p>Specialty: Cardiology</p>
+                <p>Location: New York</p>
+                <a class="button" href="/doctor/johndoe">View Profile</a>
+            </li>
+            <!-- More doctors will be added dynamically -->
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MyDoc. All rights reserved.</p>
+    </footer>
+</body>
+</html>

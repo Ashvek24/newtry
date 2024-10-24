@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif; /* Set the font for the entire page */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: #f8f9fa; /* Light background color */
+}
+
+header {
+    background-color: #007bff; /* Header background color */
+    color: white; /* Header text color */
+    padding: 10px; /* Padding inside header */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    position: relative; /* Positioning for menu icon */
+}
+
+.menu-icon {
+    font-size: 24px; /* Menu icon size */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    margin-right: 20px; /* Space between icon and title */
+}
+
+h1 {
+    flex-grow: 1; /* Allow title to take available space */
+    text-align: center; /* Center the title */
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem; /* Adjust font size */
+}
+
+.search-container {
+    display: flex; /* Use flexbox for layout */
+}
+
+.search-bar {
+    padding: 5px; /* Padding for input */
+    border: 1px solid #ccc; /* Border for input */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.search-button {
+    padding: 6px 10px; /* Button padding */
+    background-color: #0056b3; /* Button background color */
+    color: white; /* Button text color */
+    border: none; /* No border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+}
+
+.sidebar {
+    width: 250px; /* Sidebar width */
+    background-color: #343a40; /* Dark background */
+    color: white; /* Text color */
+    position: fixed; /* Fixed position */
+    height: 100%; /* Full height */
+    left: -250px; /* Hidden by default */
+    transition: left 0.3s ease; /* Smooth slide effect */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Sidebar shadow */
+    z-index: 1000; /* Keep sidebar above other elements */
+}
+
+.sidebar.active {
+    left: 0; /* Show sidebar when active */
+}
+
+.sidebar ul {
+    list-style: none; /* Remove list style */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.sidebar ul li {
+    padding: 15px; /* Padding for list items */
+}
+
+.sidebar ul li a {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    display: block; /* Block display */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.sidebar ul li a:hover {
+    background-color: #495057; /* Darker background on hover */
+}
+
+main {
+    margin-left: 20px; /* Add margin to prevent overlap with the sidebar */
+    padding: 20px; /* Add padding for the main content */
+    margin-top: 20px; /* Add top margin to avoid overlap with the header */
+}
+
+.dashboard-container {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Space between items */
+    padding: 0; /* Remove padding */
+}
+
+.card {
+    background-color: white; /* Card background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    margin: 20px; /* Margin for cards */
+    padding: 20px; /* Inner padding */
+    width: calc(25% - 40px); /* Responsive card width */
+    text-align: center; /* Center text */
+    transition: transform 0.3s; /* Animation on hover */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.card h2 {
+    color: #007bff; /* Blue color for headings */
+}
+
+.nearby-doctors {
+    width: 100%; /* Make this section take full width */
+}
+
+.doctor-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.doctor-item {
+    background: #f8f9fab9; /* Light background */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Inner padding */
+    text-align: center; /* Center text */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.252); /* Subtle shadow */
+}
+
+.doctor-image {
+    border-radius: 50%; /* Circular image */
+}
+
+.doctor-info h3 {
+    margin: 10px 0 5px; /* Margin for heading */
+}
+
+.footer {
+    text-align: center; /* Center footer text */
+    padding: 10px 0; /* Padding for footer */
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Profile - MyDoc</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background-color: #007bff;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        h1 {
+            margin: 0;
+        }
+        main {
+            max-width: 900px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #007bff;
+        }
+        p {
+            font-size: 1.1em;
+            margin: 10px 0;
+            color: #333;
+        }
+        #appointment-form {
+            margin-top: 20px;
+        }
+        label, input, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 1em;
+        }
+        input[type="date"] {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #007bff;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            main {
+                padding: 10px;
+            }
+            header, footer {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>MyDoc</h1>
+        <nav>
+            <ul>
+                <li><a href="/index">Home</a></li>
+                <li><a href="/search">Search Doctors</a></li>
+                <li><a href="/book-appointment">Book Appointment</a></li>
+                <li><a href="/my-profile">My Profile</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>About Dr. John Doe</h2>
+        <p><strong>Specialty:</strong> Cardiology</p>
+        <p><strong>Experience:</strong> 10 years</p>
+        <p><strong>Location:</strong> New York</p>
+
+        <h2>Book an Appointment</h2>
+        <form id="appointment-form" method="POST" action="/book-appointment">
+            <input type="hidden" name="doctorId" value="johndoe">
+            <label for="date">Select Date:</label>
+            <input type="date" name="date" required>
+            <button type="submit">Book Appointment</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MyDoc. All rights reserved.</p>
+    </footer>
+</body>
+</html>
